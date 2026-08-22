@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-fredoka), ui-rounded, "Trebuchet MS", sans-serif;
+  --font-body: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+
+  --color-fini-red: #e4002b;
+  --color-fini-blue: #0057b8;
+  --color-fini-yellow: #ffd200;
+  --color-fini-cream: #fff8ec;
+  --color-fini-ink: #1b1b1f;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* o scroll é a linha do tempo da página inteira */
+  background: var(--color-fini-ink);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-fini-ink);
+  background: var(--color-fini-cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* O nome grande do produto: Fredoka pesada, bem fechada, com leve itálico
+   ótico para lembrar o wordmark da Fini. */
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.84;
+  transform: skewX(-6deg);
+  text-wrap: balance;
+}
+
+/* Contorno grosso branco, como nas embalagens */
+.wordmark-outlined {
+  -webkit-text-stroke: 0.09em #fff;
+  paint-order: stroke fill;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
