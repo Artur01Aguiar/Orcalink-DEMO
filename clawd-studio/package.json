@@ -1,0 +1,15 @@
+{
+  "name": "clawd-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render.mjs",
+    "preview": "node render.mjs --preview"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "5.1.0",
+    "playwright": "1.56.1",
+    "three": "0.169.0"
+  }
+}

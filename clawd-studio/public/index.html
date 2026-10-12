@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Clawd Studio</title>
+<style>
+  @font-face { font-family: 'Mont'; font-weight: 800; src: url('/node_modules/@fontsource/montserrat/files/montserrat-latin-800-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Mont'; font-weight: 900; src: url('/node_modules/@fontsource/montserrat/files/montserrat-latin-900-normal.woff2') format('woff2'); }
+  html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Mont', sans-serif; }
+  #stage canvas { display: block; }
+  #vignette { position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 85% 70% at 50% 45%, rgba(0,0,0,0) 55%, rgba(60,30,10,0.28) 100%); }
+  #title { position: absolute; top: 170px; left: 60px; right: 60px; text-align: center;
+    font-weight: 900; font-size: 74px; line-height: 1.05; color: #1f1a17; letter-spacing: -1px; text-transform: uppercase; }
+  #title span { background: #fff; padding: 6px 22px; border-radius: 18px; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.08); }
+  #card { position: absolute; top: 420px; left: 0; right: 0; display: flex; justify-content: center; }
+  #card div { background: #D97757; color: #fff; font-weight: 900; font-size: 58px; padding: 16px 38px; border-radius: 999px;
+    box-shadow: 0 12px 30px rgba(120,50,20,0.35); text-transform: uppercase; white-space: nowrap; }
+  #caption { position: absolute; top: 1420px; left: 50px; right: 50px; text-align: center;
+    font-weight: 900; font-size: 92px; line-height: 1.12; color: #fff; text-transform: uppercase;
+    -webkit-text-stroke: 14px #1a1410; paint-order: stroke fill; letter-spacing: -1px; }
+  #caption .w { display: inline-block; margin: 0 10px; transform-origin: 50% 70%; }
+  #caption .on { color: #FFD45C; }
+  #handle { position: absolute; bottom: 120px; left: 0; right: 0; text-align: center; font-weight: 800; font-size: 40px; color: rgba(31,26,23,0.55); }
+</style>
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="stage">
+  <div id="vignette"></div>
+  <div id="title"></div>
+  <div id="card"><div></div></div>
+  <div id="caption"></div>
+  <div id="handle"></div>
+</div>
+<script type="module" src="/public/scene.js"></script>
+</body>
+</html>
